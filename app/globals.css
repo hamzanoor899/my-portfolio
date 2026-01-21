@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Helps anchor links land nicely below the sticky navbar. */
+section {
+  scroll-margin-top: 96px;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
