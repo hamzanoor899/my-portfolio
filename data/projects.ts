@@ -2,13 +2,33 @@ export const projects = [
   {
     title: "Next Gen Control Center (NGCC)",
     description:
-      "Enterprise-level admin dashboard with role-based access, authentication, and 30+ interconnected models.",
-    tech: ["Next.js", "React", "Tailwind", "NextAuth", "Prisma", "PostgreSQL"],
+      "Comprehensive admin dashboard with 30+ interconnected modules (users, roles, permissions, tickets, tasks, departments) and dynamic role-based menus.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind",
+      "NextAuth.js",
+      "JWT",
+      "Prisma",
+      "PostgreSQL",
+    ],
   },
   {
-    title: "Wosh Platform",
+    title: "Wosh",
     description:
-      "Multi-dashboard system for admin, user, driver, and laundry management with real-time workflows.",
+      "Multi-dashboard platform (admin, user, driver, laundry) with scheduling, order management, real-time tracking, and payment workflows.",
     tech: ["React", "Tailwind", "REST APIs"],
+  },
+  {
+    title: "Capital Imports",
+    description:
+      "Converted Figma designs into a fast, fully responsive business website using Bootstrap with clean, maintainable UI.",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+  },
+  {
+    title: "Daystar Care",
+    description:
+      "Designed a mobile-friendly WordPress website optimized for SEO and professional healthcare presentation.",
+    tech: ["WordPress", "SEO", "Responsive Design"],
   },
 ];
