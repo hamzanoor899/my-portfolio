@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import BackgroundFX from "@/components/BackgroundFX";
 
 export const metadata = {
   title: "Hamza Noor | Frontend Developer",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <BackgroundFX />
       </body>
     </html>
   );
