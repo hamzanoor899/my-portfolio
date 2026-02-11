@@ -49,7 +49,7 @@ export default function Experience() {
                     {item.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded"
+                        className="text-xs bg-black/[0.03] border border-black/10 px-2 py-1 rounded"
                       >
                         {t}
                       </span>
