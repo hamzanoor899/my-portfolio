@@ -5,10 +5,22 @@ export default function BackgroundFX() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       {/* Left glow */}
-      <div className="absolute -top-56 -left-72 h-[760px] w-[760px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.14),rgba(255,255,255,0)_62%)] blur-2xl" />
+      <div
+        className="absolute -top-56 -left-72 h-[760px] w-[760px] rounded-full blur-2xl"
+        style={{
+          background:
+            "radial-gradient(circle at center, var(--bgfx-glow-1), transparent 72%)",
+        }}
+      />
 
       {/* Right glow */}
-      <div className="absolute top-10 -right-52 h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),rgba(255,255,255,0)_60%)] blur-2xl" />
+      <div
+        className="absolute top-10 -right-52 h-[620px] w-[620px] rounded-full blur-2xl"
+        style={{
+          background:
+            "radial-gradient(circle at center, var(--bgfx-glow-2), transparent 70%)",
+        }}
+      />
 
       {/* Wave-ish shadow */}
       <svg
@@ -30,9 +42,13 @@ export default function BackgroundFX() {
             y2="300"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stopColor="white" stopOpacity="0" />
-            <stop offset="0.5" stopColor="white" stopOpacity="0.55" />
-            <stop offset="1" stopColor="white" stopOpacity="0" />
+            <stop offset="0" stopColor="var(--bgfx-wave)" stopOpacity="0" />
+            <stop
+              offset="0.5"
+              stopColor="var(--bgfx-wave)"
+              stopOpacity="1"
+            />
+            <stop offset="1" stopColor="var(--bgfx-wave)" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

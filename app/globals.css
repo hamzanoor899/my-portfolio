@@ -25,6 +25,11 @@ section {
   /* Text in light mode */
   --text-muted: rgba(23, 23, 23, 0.78);
   --text-muted-2: rgba(23, 23, 23, 0.62);
+
+  /* Background FX colors (light mode) */
+  --bgfx-glow-1: rgba(0, 0, 0, 0.26);
+  --bgfx-glow-2: rgba(0, 0, 0, 0.20);
+  --bgfx-wave: rgba(0, 0, 0, 0.46);
 }
 
 @theme inline {
@@ -48,6 +53,11 @@ section {
     /* Text in dark mode */
     --text-muted: rgba(237, 237, 237, 0.78);
     --text-muted-2: rgba(237, 237, 237, 0.62);
+
+    /* Background FX colors (dark mode) */
+    --bgfx-glow-1: rgba(255, 255, 255, 0.14);
+    --bgfx-glow-2: rgba(255, 255, 255, 0.08);
+    --bgfx-wave: rgba(255, 255, 255, 0.55);
   }
 }
 
