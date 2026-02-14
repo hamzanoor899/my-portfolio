@@ -18,7 +18,7 @@ export default function Projects() {
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {projects.map((project, idx) => (
             <Reveal key={project.title} delay={idx * 0.05}>
-              <div className="card p-6 hover:border-white/20 transition-colors">
+              <div className="card p-6 hover:border-black/20 transition-colors">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <p className="text-gray-400 mt-3">{project.description}</p>
 
@@ -26,7 +26,7 @@ export default function Projects() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded"
+                      className="text-xs bg-black/[0.03] border border-black/10 px-2 py-1 rounded"
                     >
                       {t}
                     </span>

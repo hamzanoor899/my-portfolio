@@ -15,6 +15,16 @@ section {
 
   --mesh-1: rgba(255, 255, 255, 0.06);
   --mesh-2: rgba(255, 255, 255, 0.03);
+
+  /* Surfaces (light mode defaults) */
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-card: rgba(255, 255, 255, 0.78);
+  --border-soft: rgba(0, 0, 0, 0.11);
+  --shadow-soft: 0 16px 55px rgba(0, 0, 0, 0.14);
+
+  /* Text in light mode */
+  --text-muted: rgba(23, 23, 23, 0.78);
+  --text-muted-2: rgba(23, 23, 23, 0.62);
 }
 
 @theme inline {
@@ -28,6 +38,16 @@ section {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* Surfaces (dark mode) */
+    --surface-glass: rgba(0, 0, 0, 0.4);
+    --surface-card: rgba(255, 255, 255, 0.03);
+    --border-soft: rgba(255, 255, 255, 0.09);
+    --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.55);
+
+    /* Text in dark mode */
+    --text-muted: rgba(237, 237, 237, 0.78);
+    --text-muted-2: rgba(237, 237, 237, 0.62);
   }
 }
 
@@ -50,6 +70,19 @@ body {
   letter-spacing: -0.01em;
 }
 
+/*
+  Increase text prominence across themes without rewriting classNames.
+  These Tailwind-like classnames are used heavily in components.
+*/
+.text-gray-300 {
+  color: var(--text-muted) !important;
+}
+
+.text-gray-400,
+.text-gray-500 {
+  color: var(--text-muted-2) !important;
+}
+
 /* Pretty text selection */
 ::selection {
   background: rgba(255, 255, 255, 0.18);
@@ -63,13 +96,14 @@ body {
 }
 
 .glass {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   backdrop-filter: blur(10px);
 }
 
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+  background: var(--surface-card);
   border-radius: 1.25rem;
+  box-shadow: var(--shadow-soft);
 }
